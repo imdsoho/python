@@ -1,4 +1,5 @@
 # file: /python3.5/collections/__init__.py
+# [참조] http://www.jinniahn.com/2016/07/ordereddict-python.html
 
 from _weakref import proxy as _proxy
 
