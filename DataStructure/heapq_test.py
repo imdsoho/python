@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # 데이터를 정렬된 상태로 저장하기 위해서 사용
 # heapq 모듈은 이진 트리(binary tree) 기반의 최소 힙(min heap) 자료구조를 제공
 # min heap을 사용하면 원소들이 항상 정렬된 상태로 추가되고 삭제되며, min heap에서 가장 작은값은 언제나 인덱스 0, 즉, 이진 트리의 루트에 위치합니다.
@@ -34,7 +36,6 @@ print(heap[0])
 # 즉 O(N)의 시간 복잡도를 가집니다.
 
 heap = [4, 1, 7, 3, 8, 5]
-
 heapq.heapify(heap)
 
 print(heap)
@@ -48,10 +49,11 @@ nums = [4, 1, 7, 3, 8, 5]
 heap = []
 
 for num in nums:
-    heapq.heappush(heap, (-num, num)) # (우선 순위, 값)
+    heapq.heappush(heap, (-num, num))  # (우선 순위, 값)
 
     while heap:
-        print(heapq.heappop(heap)[1]) # index 1
+        print(heapq.heappop(heap)[1])  # index 1
+
 
 # K번째 최소값/최대값
 # 최소 힙이나 최대 힙을 사용하면 K번째 최소값이나 최대값을 효츌적으로 구할 수 있습니다.
@@ -71,6 +73,7 @@ def kth_smallest(nums, k):
     return kth_min
 
 print(kth_smallest([4, 1, 7, 3, 8, 5], 3))
+
 
 # 힙 정렬
 # 힙 정렬(heap sort)은 위에서 설명드린 힙 자료구조의 성질을 이용한 대표적인 정렬 알고리즘입니다.
