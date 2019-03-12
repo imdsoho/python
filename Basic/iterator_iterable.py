@@ -39,5 +39,5 @@ y = iter(x)
 type(y)
 # <type 'listiterator'>
 
-[참고] https://bluese05.tistory.com/55
-[참고] https://wikidocs.net/16068
+# [참고] https://bluese05.tistory.com/55
+# [참고] https://wikidocs.net/16068
