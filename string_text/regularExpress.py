@@ -91,3 +91,39 @@ address = [
 
 alist = [addr for addr in address if fnmatch(addr, '* ST')]
 print(alist)
+
+# 대소문자를 구분하지 않고 검색하기
+text = "UPPER PYTHON, lower python, Mixed Python"
+re.findall('python', text, flags=re.IGNORECASE)
+re.sub('python', 'snake', text, flags=re.IGNORECASE)
+
+def matchcase(word):
+
+    def replace(m):
+        text = m.group()
+
+        if text.isupper():
+            return word.upper()
+        elif text.islower():
+            return word.lower()
+        elif text[0].isupper():
+            return word.capitalize()
+        else:
+            return word
+
+    return replace
+
+chgText = re.sub('python', matchcase('snake'), text, flags=re.IGNORECASE)
+print(chgText)
+
+# 가장 짧은 매칭을 위한 정규 표현식
+str_pat = re.compile(r'/"(.*)/"')
+text1 = 'Computer says "no."'
+str_pat.findall(text1)
+
+text2 = 'Computer says "no." Phone says "yes."'
+str_pat.findall(text2)
+
+str_pat2 = re.compile(r'/"(.*?)/"')
+str_pat2.findall(text2)
+
