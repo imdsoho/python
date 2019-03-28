@@ -1,5 +1,6 @@
 import sys
 
+# 프레임 핵(frame hack)
 # sys._getframe().f_locals
 
 def customsub(text):
