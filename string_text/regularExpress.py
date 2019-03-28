@@ -116,6 +116,21 @@ def matchcase(word):
 chgText = re.sub('python', matchcase('snake'), text, flags=re.IGNORECASE)
 print(chgText)
 
+# re.sub(pattern, repl, string, count=0, flags=0)
+# repl can be a string or a function;
+# If repl is a function, it is called for every non-overlapping occurrence of pattern.
+# The function takes a single match object argument, and returns the replacement string.
+
+def dashrepl(matchobj):
+    if matchobj.group(0) == '-':
+        return ' '
+    else:
+        return '-'
+dash1 = re.sub('-{1,2}', dashrepl, 'pro----gram-files')
+print(dash1) #'pro--gram files'
+dash2 = re.sub(r'\sAND\s', ' & ', 'Baked Beans And Spam', flags=re.IGNORECASE)
+print(dash2) #'Baked Beans & Spam'
+
 # 가장 짧은 매칭을 위한 정규 표현식
 str_pat = re.compile(r'/"(.*)/"')
 text1 = 'Computer says "no."'
