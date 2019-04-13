@@ -92,8 +92,6 @@ def clock3(fmt=DEFAULT_FMT):
         return clocked
     return decorate
 
-
-
 if __name__ == '__main__':
     print('*' * 40, 'Calling snooze(.123)')
     snooze(.123)
