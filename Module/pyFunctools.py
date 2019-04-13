@@ -23,10 +23,6 @@ def htmlize(obj):
     return '<pre>{}</pre>'.format(content)
 
 
-
-
-
-
 if __name__=='__main__':
     print(fibonacci(6))
 
