@@ -37,6 +37,7 @@ print(a)
 # 지역 네임스페이스에 없는 변수는 전역 네임스페이스로부터 참조할 수 있지만,
 # 전역 네임스페이스에 있는 변수의 데이터를 변경할 수 없다.
 
+# [참조] - https://github.com/imdsoho/python/blob/master/decorator_closure/closure.py
 def countdown(init_n):
     n = init_n
 
@@ -50,12 +51,6 @@ def countdown(init_n):
         minusone()
 
 countdown(3)
-
-
-
-
-
-
 
 
 # [참조][책] 엔지니어를 위한 파이썬
