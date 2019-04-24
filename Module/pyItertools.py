@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from itertools import islice, dropwhile, permutations, combinations, combinations_with_replacement
 
 def count(n):

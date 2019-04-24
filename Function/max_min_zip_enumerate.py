@@ -47,4 +47,3 @@ for idx, line in enumerate(lines):
 
     for word in words:
         word_summary[word].append(idx)
-
