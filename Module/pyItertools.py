@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-from itertools import islice, dropwhile, permutations, combinations, combinations_with_replacement
+from itertools import islice, dropwhile, permutations, combinations, combinations_with_replacement, chain
 
 def count(n):
     while True:
@@ -26,3 +26,7 @@ for x in itertools.islice(c, 10, 20):
 
 # combinations_with_replacement()
 # 중복을 허용하여 가능한 조합 생성
+
+# chain()
+# 서로 다른 컬렉션 연속하여 순환
+

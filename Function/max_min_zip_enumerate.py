@@ -47,3 +47,11 @@ for idx, line in enumerate(lines):
 
     for word in words:
         word_summary[word].append(idx)
+
+xpts = [1,5,4,2,10,7]
+ypts = [101,78,37,15,62,99]
+for x,y in zip(xpts, ypts):
+    print (x,y)
+
+s = dict(zip(xpts, ypts))
+
