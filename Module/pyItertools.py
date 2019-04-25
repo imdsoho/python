@@ -29,4 +29,3 @@ for x in itertools.islice(c, 10, 20):
 
 # chain()
 # 서로 다른 컬렉션 연속하여 순환
-
