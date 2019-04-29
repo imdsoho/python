@@ -1,4 +1,5 @@
 #@classmethod
+#인스턴스가 아니라 클래스 자체에 작용하는 메소드
 #@classmethod 데커레이터는 객체가 아닌 클래스에 연산을 수행하는 메소드를 정의한다.
 #@classmethod는 메소드가 호출하는 방식을 변경해서 클래스 자체를 첫 번째 인수로 받게 만든다.
 
@@ -58,3 +59,65 @@ print("[2]", demo_inst2.num)
 
 demo2 = Demo.klassmeth2('hello','world')
 print(demo2)
+
+import time
+class MyTime():
+    def __init__(self, hour, minutes, sec):
+        self.hour = hour
+        self.minutes = minutes
+        self.sec = sec
+
+    @staticmethod
+    def now():
+        t = time.localtime()
+        return MyTime(t.tm_hour, t.tm_min, t.tm_sec)
+
+    @staticmethod
+    def two_hours_later():
+        t = time.localtime(time.time() + 7200)
+        return MyTime(t.tm_hour, t.tm_min, t.tm_sec)
+
+a = MyTime(15,20,58)
+b = MyTime.now()
+c = MyTime.two_hours_later()
+
+class CoeffVar():
+    coefficient = 1
+
+    @classmethod
+    def mul(cls, fact):
+        return cls.coefficient * fact
+
+class MulFive(CoeffVar):
+    coefficient = 5
+
+x = MulFive.mul(4)  # CoeffVar.mul(MulFive, 4)
+print(x)
+
+class Date :
+    word = 'date : '
+
+    def __init__(self, date):
+        print('[constructor]', date, type(self), self.word)
+        self.date = self.word + date
+
+    @classmethod
+    def now(cls):
+        return cls("today")
+
+    def show(self):
+        print(self.date)
+
+class KoreanDate(Date):
+    word = '날짜 : '
+
+a = KoreanDate.now() # Date.now(KoreaDate)
+a.show()
+# >>> [constructor] today <class '__main__.KoreanDate'> 날짜 :
+# >>> classmethod 호출 -> KoreaDate 클래스에서 생성자 호출
+
+#b = Date.now()
+#b.show()
+# >>> [constructor] today <class '__main__.Date'> date :
+# >>> date : today
+
