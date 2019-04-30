@@ -13,10 +13,44 @@ f2(3)'''
 
 def f2_refactor(a):
     global b    # 지역변수 b를 전역 변수로 처리 - 에러 발생 없음
-    print(a)
-    print(b)
+    #print(a)
+    #print(b)
     b = 9
 
 from dis import dis
-dis(f2_refactor)
+#dis(f2_refactor)
+
+
+cheeseName = ['Red Leicester', 'Tilsit', 'Brie', 'Parmesan']
+for cheese in cheeseName:
+    print(cheese)
+
+print(dir())
+print(cheese)
+
+cache = cheese
+print(cache)
+
+class Cheese:
+    def __init__(self, kind):
+        self.kind = kind
+
+    def __repr__(self):
+        return 'Cheese(%r)' % self.kind
+
+import weakref
+stock = weakref.WeakValueDictionary()
+catalog = [Cheese('Red Leicester'), Cheese('Tilsit'), Cheese('Brie'), Cheese('Parmesan')]
+
+for cheese in catalog:
+    stock[cheese.kind] = cheese
+
+print(sorted(stock.keys()))
+
+for key in stock.keys():
+    #print(type(stock.get(key)))
+    #print(id(stock.get(key)))
+    print(stock.get(key))
+
+print(dir())
 
