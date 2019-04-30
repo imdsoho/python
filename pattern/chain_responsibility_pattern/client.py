@@ -1,9 +1,9 @@
 
-from com.bsb.calc.chain.add_operation_handler import AddOperationHandler
-from com.bsb.calc.chain.substract_operation_handler import SubstractOperationHandler
-from com.bsb.calc.chain.multiply_operation_handler import MultiplyOperationHandler
-from com.bsb.calc.chain.divide_operation_handler import DivideOperationHandler
-from com.bsb.calc.chain.request import Request
+from add_operation_handler import AddOperationHandler
+from substract_operation_handler import SubstractOperationHandler
+from multiply_operation_handler import MultiplyOperationHandler
+from divide_operation_handler import DivideOperationHandler
+from request import Request
 
 class Client:
    

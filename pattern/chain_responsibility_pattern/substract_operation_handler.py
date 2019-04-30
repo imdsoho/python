@@ -1,5 +1,5 @@
 
-from com.bsb.calc.chain.abstract_operation_handler import AbstractOperationHandler
+from abstract_operation_handler import AbstractOperationHandler
 
 class SubstractOperationHandler(AbstractOperationHandler):
     

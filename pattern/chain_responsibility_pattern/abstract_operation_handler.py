@@ -1,7 +1,9 @@
 
 from abc import abstractmethod, ABCMeta
 
-class AbstractOperationHandler(metaclass=ABCMeta):
+#class AbstractOperationHandler(metaclass=ABCMeta):
+class AbstractOperationHandler():
+    __metaclass__ = ABCMeta
     
     def __init__(self, operator):
         self.operator = operator
