@@ -15,7 +15,7 @@ class Client:
         
         addOperationHandler.setNext(substractOperationHandler).setNext(multiplyOperationHandler).setNext(divideOperationHandler)
 
-        requests = [Request("100+20"), Request("100-20"), Request("100*20"), Request("100/20")]
+        requests = [Request("100/20"), Request("100+20"), Request("100*20"), Request("100-20")]
         
         for request in requests:
             answer = addOperationHandler.handleRequest(request)

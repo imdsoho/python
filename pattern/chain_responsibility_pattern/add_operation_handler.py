@@ -5,6 +5,7 @@ class AddOperationHandler(AbstractOperationHandler):
     
     def __init__(self, operator):
         AbstractOperationHandler.__init__(self, operator)
+        #super().__init__(self, operator)
     
     def operate(self, request):
         operator = self.getOperator()
