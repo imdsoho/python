@@ -5,7 +5,7 @@ from collections import namedtuple
 
 Subscriber = namedtuple('Subscriber', ['addr', 'joined'])
 sub = Subscriber('abc@example.com', '2012-10-19')
-print (type(sub))
+#print (type(sub))
 
 Stock = namedtuple('Stock', ['name', 'shares', 'price'])
 def compute_cost(records):
@@ -29,3 +29,12 @@ def dict_to_stock(s):
     return stock_prototyp._replace(**s)
 
 
+grades = []
+Grade = namedtuple('Grade', ('score', 'weight'))
+g1 = Grade(5, 1)
+g2 = Grade(4.5, 1)
+grades.append(g1)
+grades.append(g2)
+
+for g in grades:
+    print(g.score)
