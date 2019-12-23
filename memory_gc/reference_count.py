@@ -34,3 +34,4 @@ def show_ref_count():
     print("func-2 : ", sys.getrefcount(func_obj))
 
 show_ref_count()
+
