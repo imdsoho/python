@@ -76,5 +76,5 @@ class cust_slice(object):
 
     __hash__ = None
 
-sl = cust_slice(10)
+sl = cust_slice(1)
 print(sl)
