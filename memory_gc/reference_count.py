@@ -10,7 +10,7 @@ def functionObject_2():
     pass
 
 def show_ref_count():
-    str_obj = "string_data"
+    str_obj = "string_data_adlielnalidjfladkjfaliejl"
     print("str : ", sys.getrefcount(str_obj))
 
     dict_obj = {"a":"1", "b":2}
