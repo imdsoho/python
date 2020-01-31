@@ -3,15 +3,18 @@ import weakref
 class Apple:
     pass
 
-a = Apple()
-a.color = 'red'
+def callback(reference):
+    print('callback({!r})'.format(reference))
 
-r = weakref.ref(a)
+apple = Apple()
+apple.color = 'red'
+
+r = weakref.ref(apple, callback)
 print(type(r), r)
 
 ref_a = r()
-print(a.color)
+print(apple.color)
 print(ref_a.color)
-print(a is ref_a)
+print(apple is ref_a)
 
-
+del apple

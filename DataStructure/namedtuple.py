@@ -21,10 +21,11 @@ def compute_cost(records):
 
 s = Stock('ACME', 100, 123.45)
 s = s._replace(shares=75)
+print(s)
 
 # 프로토타입 튜플 생성
-Stock = namedtuple('Stock', ['name', 'shares', 'price', 'date', 'time'])
-stock_prototyp = Stock('', 0, 0.0, None, None)
+StockNew = namedtuple('Stock_N', ['name', 'shares', 'price', 'date', 'time'])
+stock_prototyp = StockNew('', 0, 0.0, None, None)
 def dict_to_stock(s):
     return stock_prototyp._replace(**s)
 
@@ -38,3 +39,8 @@ grades.append(g2)
 
 for g in grades:
     print(g.score)
+
+
+Point = namedtuple('PPP', ['x', 'y'])
+p = Point(11,22)
+print(p[0] + p[1])
