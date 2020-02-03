@@ -34,4 +34,5 @@ merged.update(a)
 print(merged)
 print(a)
 #print(c)
+# 원본 dictionary의 변경 내용은 반영되지 않는다.
 # update() - 원본 딕셔너리의 변경을 반영한다.
