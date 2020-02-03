@@ -6,17 +6,32 @@ from collections import ChainMap
 a = {'x':1, 'z':2}
 b = {'y':2, 'z':3}
 c = ChainMap(a, b)
-print (len(c)) # 3
+#print (len(c)) # 3
 
 values = ChainMap()
 values['x'] = 1
 values = values.new_child()
 values['x'] = 2
+#print(values)
 
 # 완전히 별개의 딕셔너리를 생성하여 하나로 합친다.
 # 원본 딕셔너리의 내용을 변경해도 합쳐 놓은 딕셔너리에 영향은 없다.
 merged = dict(a)
-merged.update(a)
-print (len(merged)) # 3
+print(merged)
+print(a)
+#print(c)
+print("------------")
 
-# ChainMap은 원본 딕셔너리를 참조한다. 원본 딕셔너리의 변경을 반영한다.
+merged['x'] = '@'
+a['x'] = 'A'
+print(merged)
+print(a)
+#print(c)
+
+print("------------")
+merged.update(a)
+#print (len(merged)) # 3
+print(merged)
+print(a)
+#print(c)
+# update() - 원본 딕셔너리의 변경을 반영한다.
